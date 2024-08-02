@@ -1,0 +1,7 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Copying index.html to S3 bucket..."
+      - aws s3 cp index.html s3://luit-red-july-cicd-beta --acl public-read
